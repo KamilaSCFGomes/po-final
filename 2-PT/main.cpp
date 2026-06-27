@@ -104,7 +104,6 @@ void cplex(){
 		model.add(sum >= demanda[i]);
 		numberRes++;
 	}
-	printf("FIM\n");
 
 
 	//------ EXECUCAO do MODELO ----------

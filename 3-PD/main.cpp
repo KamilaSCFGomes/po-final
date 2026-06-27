@@ -66,7 +66,7 @@ void cplex(){
             sum += custos[i][j] * x[i][j];
         }
 	}
-	model.add(IloMinimize(env, sum)); //Maximizacao
+	model.add(IloMinimize(env, sum)); //Minimizacao
 
 	//RESTRICOES ---------------------------------------------	
 	 
