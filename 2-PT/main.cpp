@@ -3,6 +3,7 @@
 +-------------------------------------------------------+ */
 
 #include <bits/stdc++.h>
+#include <iomanip>
 #include <ilcplex/ilocplex.h>
 
 using namespace std;
@@ -49,10 +50,14 @@ void cplex(){
 
 	//Definicao - Variaveis de Decisao 2 dimensoes (x_ij) não binárias (discretas)
 	IloArray<IloNumVarArray> x(env);
-	for( i = 0; i < C; i++ ){
+	for( i = 0; i < O; i++ ){
 		x.add(IloNumVarArray(env));
-		for( j = 0; j < C; j++ ){
-			x[i].add(IloIntVar(env, 0, INT_MAX));
+		for( j = 0; j < D; j++ ){
+			if(transporte[i][j] == infinito){
+				x[i].add(IloNumVar(env, 0.0, 0.0));
+			} else {
+				x[i].add(IloNumVar(env, 0.0, IloInfinity));
+			}
 			numberVar++;
 		}
 	}
@@ -67,7 +72,6 @@ void cplex(){
 	IloExpr sum2(env); /// Expression for Sum2
 	int soma = 0;
 	//FUNCAO OBJETIVO ---------------------------------------------
-	printf("OBJETIVO\n");
 	sum.clear();
 	for(i=0; i<O; i++){
 		for(j=0; j<D; j++){
@@ -80,29 +84,23 @@ void cplex(){
 	//RESTRICOES ---------------------------------------------	
 	
 	//R1 - Oferta das origens
-	printf("RESTRICAO 1\n");
 	for(i=0; i<O; i++){ // para toda origem
 		sum.clear();
 		for(j=0; j<D; j++){
 			if(transporte[i][j] == infinito){continue;}
 			sum += x[i][j];
 		}
-		printf("%d <= %d\n",sum, oferta[i]);
 		model.add(sum <= oferta[i]);
 		numberRes++;
 	}
 
 	//R2 - Demandas dos destinos
-	printf("RESTRICAO 2\n");
 	for(i=0; i<D; i++){ // para toda origem
-		printf("sum: %d ",sum);
 		sum.clear();
-		printf(" -> %d\n", sum);
 		for(j=0; j<O; j++){
 			if(transporte[j][i] == infinito){continue;}
 			sum += x[j][i];
 		}
-		printf("%d >= %d\n",sum, demanda[i]);
 		model.add(sum >= demanda[i]);
 		numberRes++;
 	}
@@ -184,8 +182,12 @@ void cplex(){
     	for(i=0; i<O; i++){
         	printf("%3d\t",i);
         	for(int j=0; j<D; j++){
+				if(transporte[i][j] == infinito){
+					cout << setw(4) << "-";
+					continue;
+				}
 				value = IloRound(cplex.getValue(x[i][j]));
-	        	printf("%3d ",value);
+				printf("%3d ", static_cast<int>(value));
         	}
         	printf("\n");
     	}
