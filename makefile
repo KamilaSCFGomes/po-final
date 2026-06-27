@@ -22,7 +22,7 @@ help:
 	$(MAKE) -C $(PROG_2)
 
 3:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_3)
 
 4:
 	@echo "Ainda não implementado"
@@ -42,7 +42,7 @@ run_2:
 	$(MAKE) -C $(PROG_2) run
 
 run_3:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_3) run
 
 run_4:
 	@echo "Ainda não implementado"
@@ -62,7 +62,7 @@ clean_2:
 	$(MAKE) -C $(PROG_2) clean
 
 clean_3:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_3) clean
 
 clean_4:
 	@echo "Ainda não implementado"
