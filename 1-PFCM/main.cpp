@@ -100,6 +100,8 @@ void cplex(){
 		model.add(sum - sum2 == b[i]);
 		numberRes++;
 	}
+
+
 	//------ EXECUCAO do MODELO ----------
 	time_t timer, timer2;
 	IloNum value, objValue;
