@@ -5,14 +5,13 @@ Este é um Trabalho avaliativo para a disciplina de Pesquisa Operacional, que co
 
 # Dependências
 
-É necessário ter o ILOGCPLEX instalado.
+É necessário ter o ILOGCPLEX versão instalado.
 
 # Arquivos
 
 Cada pasta representa um problema diferente que resolvido para o trabalho.
 
-As entradas para cada problema estão no arquivo `in.txt`. No caso de entradas com grafos, a primeira linha deve conter dois inteiros N e M que indicam o número de vértices e arestas, respectivamente, e as próximas M linhas devem ser formadas por três inteiros A, B e C, que indicam que existe uma ligação de valor C entre os vértices A, B.
-
+As entradas para cada problema estão no arquivo `in.txt`. Para cada problema, há um comentário explicando a formatação das entradas no início do arquivo `main.cpp`.
 
 O código para a resolução do problema está no arquivo `main.cpp`.
 

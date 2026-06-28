@@ -1,6 +1,20 @@
-/*---------------- File: main.cpp  ---------------------+
-|        Modelo PLI - Problema do Transporte            |
-+------------------------------------------------------*/
+/*------------------- File: main.cpp  -----------------------+
+|            Modelo PLI - Problema do Transporte             |
++-----------------------------------------------------------*/
+
+/*----------------- Formatação da entrada ------------------+
+|	A primeira linha é composta por O D C, que representam,	|
+|	respectivamente, os números de origens, destinos e		|
+|	caminhos para transporte (ou arestas do grafo). As		|
+|	próximas O linhas representam a oferta de cada origem,	|
+|	as D linhas seguintes representam a demanda de cada		|
+|	destino, e as C linhas restantes representam os custos	|
+|	de cada caminho disponível. As linhas de custo são		|
+|	compostas por i j c, que representam, respectivamente,	|
+|	os índices (começando em 0) da origem e do destino, e	|
+|	o custo daquela aresta.									|
++----------------------------------------------------------*/
+
 
 #include <bits/stdc++.h>
 #include <iomanip>

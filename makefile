@@ -1,4 +1,4 @@
-PROG_1 = exemplo:mochila
+PROG_1 = 1-PFCM
 PROG_2 = 2-PT
 PROG_3 = 3-PD
 PROG_4 = 4-PCM
@@ -25,10 +25,10 @@ help:
 	$(MAKE) -C $(PROG_3)
 
 4:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_4)
 
 5:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_5)
 
 
 
@@ -45,10 +45,10 @@ run_3:
 	$(MAKE) -C $(PROG_3) run
 
 run_4:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_4) run
 
 run_5:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_5) run
 
 
 
@@ -65,7 +65,7 @@ clean_3:
 	$(MAKE) -C $(PROG_3) clean
 
 clean_4:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_4) clean
 
 clean_5:
-	@echo "Ainda não implementado"
+	$(MAKE) -C $(PROG_5) clean

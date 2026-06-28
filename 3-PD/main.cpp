@@ -1,6 +1,13 @@
-/*---------------- File: main.cpp  ---------------------+
-|        Modelo PLI - Problema da Designação            |
-+------------------------------------------------------*/
+/*------------------- File: main.cpp  -----------------------+
+|            Modelo PLI - Problema da Designação             |
++-----------------------------------------------------------*/
+
+/*----------------- Formatação da entrada ------------------+
+|	A primeira linha representa a quantidade N de tarefas e	|
+|	pessoas. As próximas N^2 linhas são formadas por P T C,	|
+|	que representam uma pessoa, uma tarefa e um custo,		|
+|	respectivamente.										|
++----------------------------------------------------------*/
 
 #include <bits/stdc++.h>
 #include <ilcplex/ilocplex.h>
