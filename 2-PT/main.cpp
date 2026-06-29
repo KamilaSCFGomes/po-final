@@ -41,11 +41,11 @@ ILOSTLBEGIN //MACRO - "using namespace" for ILOCPEX
 */
 
 // Conjuntos do Problema
-int O; // Quantidade de origens
-vector<int> oferta; // Oferta das origens
-int D; // Quantidade de destinos
-vector<int> demanda; // Demanda de cada destino
-int C; // Quantidade de caminhos
+int O;							// Quantidade de origens
+vector<int> oferta;				// Oferta das origens
+int D;							// Quantidade de destinos
+vector<int> demanda;			// Demanda de cada destino
+int C;							// Quantidade de caminhos
 vector<vector<int>> transporte; //Conjunto de opcoes de transporte
 
 int infinito = std::numeric_limits<int>::max();

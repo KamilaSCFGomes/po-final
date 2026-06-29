@@ -3,7 +3,13 @@
 +-----------------------------------------------------------*/
 
 /*----------------- Formatação da entrada ------------------+
-|															|
+|	A primeira linha é composta por N M, que representam	|
+|	a quantidade de vértices e de arestas. A segunda		|
+|	linha é composta por f s, que representam os índices	|
+|	dos vértices de fonte e sumidouro. As próximas M		|
+|	linhas são formadas por o d c, que representam,			|
+|	respectivamente, os índices de origem e destino e a		|
+|	capacidade de uma aresta.								|
 +----------------------------------------------------------*/
 
 #include <bits/stdc++.h>
@@ -31,12 +37,12 @@ ILOSTLBEGIN //MACRO - "using namespace" for ILOCPEX
 */
 
 // Conjuntos do Problema
-int N; // Quantidade de nos (vertices)
-int M; // Quantidade de arcos (arestas)
-int fonte; // origem do fluxo maximo //////////////////////////////////////////////////////////////////
-int sumidouro; // sumidouro destino do fluxo maximo /////////////////////////////////////////////////////////////
-vector<vector<int>> capacidade; // Matriz de capacidades (uij) de cada arco ////////////////////////////////////////////
-vector<vector<bool>> existe; // Matriz de existencia de arcos (true = arco existe) ////////////////////////////////////
+int N;							// Quantidade de nos (vertices)
+int M;							// Quantidade de arcos (arestas)
+int fonte;						// origem do fluxo maximo
+int sumidouro;					// sumidouro destino do fluxo maximo
+vector<vector<int>> capacidade;	// Matriz de capacidades (uij) de cada arco
+vector<vector<bool>> existe;	// Matriz de existencia de arcos (true = arco existe)
 
 int infinito = std::numeric_limits<int>::max();
 

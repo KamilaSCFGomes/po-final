@@ -5,8 +5,8 @@
 /*----------------- Formatação da entrada ------------------+
 |   A primeira linha é composta por O D, que representam o  |
 |   índice dos nós de origem e destino. A segunda linha é   |
-|   composta por M N, que representam a quantidade de       |
-|   vértices e de arestas. As próximas N linhas são         |
+|   composta por N M, que representam a quantidade de       |
+|   vértices e de arestas. As próximas M linhas são         |
 |   formadas por o d c, que representam, respectivamente,   |
 |   os índices de origem e destino e o custo de uma aresta. |
 +----------------------------------------------------------*/

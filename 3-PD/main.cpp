@@ -3,10 +3,10 @@
 +-----------------------------------------------------------*/
 
 /*----------------- Formatação da entrada ------------------+
-|	A primeira linha representa a quantidade N de tarefas e	|
-|	pessoas. As próximas N^2 linhas são formadas por P T C,	|
-|	que representam uma pessoa, uma tarefa e um custo,		|
-|	respectivamente.										|
+|	A primeira linha representa a quantidade N de tarefas	|
+|	e pessoas. As próximas N^2 linhas são formadas por		|
+|	P T C, que representam uma pessoa, uma tarefa e um		|
+|	custo, respectivamente.									|
 +----------------------------------------------------------*/
 
 #include <bits/stdc++.h>
@@ -33,8 +33,8 @@ ILOSTLBEGIN //MACRO - "using namespace" for ILOCPEX
 */
 
 //Conjuntos do Problema
-int N; //Quantidade de pessoas e tarefas
-vector<vector<int>> custos; //Matriz de custos por pessoa por tarefa
+int N;						//Quantidade de pessoas e tarefas
+vector<vector<int>> custos;	//Matriz de custos por pessoa por tarefa
 
 void cplex(){
     //CPLEX

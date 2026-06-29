@@ -3,7 +3,14 @@
 +-----------------------------------------------------------*/
 
 /*----------------- Formatação da entrada ------------------+
-|															|
+|	A primeira linha é formada por N M que representam as	|
+|	quantidades de nós e de arestas do grafo. Para as		|
+|	próximas N linhas, valores positivos representam		|
+|	oferta, valores negativos representam demanda, e 0		|
+|	representa um nó de transbordo. As M linhas restantes	|
+|	são compostas por ori des cap cus, que representam,		|
+|	respectivamente, origem, destino, capacidade e custo	|
+|	de uma aresta.											|
 +----------------------------------------------------------*/
 
 #include <bits/stdc++.h>
@@ -31,11 +38,11 @@ ILOSTLBEGIN //MACRO - "using namespace" for ILOCPEX
 */
 
 // Conjuntos do Problema
-int N; // Quantidade de nos (vertices) ////////////////////////////////////////////////////////////////////////////////
-int M; // Quantidade de arcos (arestas) ///////////////////////////////////////////////////////////////////////////////
-vector<int> b; // Saldo de cada no: oferta (b>0), demanda (b<0) ou transbordo (b=0) ////////////////////////////////////
-vector<vector<int>> custo; // Matriz de custos de cada arco ////////////////////////////////////////////////////////////
-vector<vector<int>> capacidade; // Matriz de capacidades (uij) de cada arco ////////////////////////////////////////////
+int N;							// Quantidade de nos (vertices)
+int M;							// Quantidade de arcos (arestas)
+vector<int> b;					// Saldo de cada no: oferta (b>0), demanda (b<0) ou transbordo (b=0)
+vector<vector<int>> custo;		// Matriz de custos de cada arco
+vector<vector<int>> capacidade;	// Matriz de capacidades (uij) de cada arco
 
 int infinito = std::numeric_limits<int>::max();
 
